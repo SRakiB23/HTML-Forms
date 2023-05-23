@@ -1,51 +1,80 @@
 body {
-    background-color: rgb(31, 30, 30);
-    font-family: 'Roboto', sans-serif;
+    background-color: rgb(236, 252, 253);
+    font-family: sans-serif;
+}
+
+section {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem;
+    color: rgb(21, 20, 20);
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 form {
-    width: 30rem;
-    margin: 3rem auto;
-    background-color: rgb(255, 255, 255);
+    width: 40rem;
+    margin: auto;
+    background-color: rgb(200, 228, 239);
     padding: 1rem;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 label {
-    margin-bottom: .5rem;
+    color: rgb(34, 43, 61);
+    margin: .5rem 0;
     display: block;
 }
 
-input {
+input,
+textarea,
+select {
     width: 100%;
     display: block;
     margin-bottom: 1rem;
     box-sizing: border-box;
+    border-radius: 4px;
     font: inherit;
-    border: 1px solid rgb(184, 184, 184);
+    border: 1px solid rgb(152, 159, 184);
     padding: 0.25rem;
-    color: rgb(61, 58, 58);
+    color: rgb(18, 17, 17);
 }
 
-input:focus {
-    background-color: rgb(219, 190, 253);
-    color: rgb(32,5,63);
-    border-color: rgb(32,5,63);
+textarea{
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    background-color: rgb(217, 227, 247);
+    color: rgb(18, 18, 19);
+    border-color: rgb(194, 181, 209);
 }
 
 button {
     display: block;
     font: inherit;
-    background-color: rgb(32,5,63);
+    background-color: rgb(54, 65, 102);
     color: white;
-    border: 1px solid rgb(32,5,63);
+    border: 1px solid rgb(185, 164, 209);
     padding: 0.5rem 1.5rem;
+    margin-inline: 0.2rem;
     border-radius: 4px;
     cursor: pointer;
+    
 }
 
 button:hover {
-    background-color: rgb(52, 14, 95);
+    background-color: rgb(40, 47, 68);
     border-color: rgb(52, 14, 95);
 }
 
@@ -56,5 +85,34 @@ button:hover {
 
 .form-control-inline input {
     width: auto;
+    margin: 0;
     margin-right: .5rem;
+}
+
+.button {
+    font: inherit;
+    /* border: 1px solid rgb(51,67,100); */
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    cursor: pointer;
+    justify-content: right;
+}
+
+.btn-filled{
+    background-color: rgb(51, 67, 100);
+    color: white;
+}
+
+.btn-empty{
+    background-color: transparent;
+    color: rgb(51, 67, 100);
+}
+
+.btn-filled:hover{
+    background-color: rgb(69, 89, 129);
+    border-color:rgb(69, 89, 129); 
+}
+
+.btn-empty:hover{
+    background-color: rgb(208, 215, 230);
 }

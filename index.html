@@ -13,60 +13,107 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <form action="/" method="GET">
-      <label for="username">Your Name</label>
-      <input type="text" name="user-name" id="username" />
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="username">Your Name</label>
+              <input type="text" name="user-name" id="username" required />
+            </li>
+            <li>
+              <label for="useremail">Your E-mail Address</label>
+              <input type="email" name="user-email" id="useremail" required />
+            </li>
+            <li>
+              <label for="userphonenumber">Your Phone Number</label>
+              <input
+                type="phonenumber"
+                name="user-phonenumber"
+                id="userphonenumber"
+                required
+                minlength="4"
+              />
+            </li>
+          </ul>
+        </section>
 
-        <label for="usermessage">Your message</label>
-        <textarea id="usermessage"></textarea>
+        <section>
+          <label for="usermessage">Your message</label>
+          <textarea id="usermessage" name="user-message" rows="5" required>
+          </textarea>
+        </section>
 
-      <label for="useremail">Your email address</label>
-      <input type="email" name="user-email" id="useremail" />
-      <label for="userage">Your age</label>
-      <input type="number" step="1" name="user-age" id="userage" />
-      <label for="userpassword">Your password</label>
-      <input type="password" name="user-password" id="userpassword" />
-      <label for="userbirthdate"></label>
-      <input type="date" name="user-birthdate" id="userbirthdate" />
-      <hr />
-      <h2>How would you like to verify your account!</h2>
-      <div class="form-control-inline">
-        <input
-          type="radio"
-          name="verify"
-          id="verify-text-message"
-          value="text-message"
-        />
-        <label for="verify-text-message">Via Text Message (SMS)</label>
-      </div>
+        <section>
+          <label for="channel">How did you find us?</label>
+          <select name="channle" id="channel" required>
+            <option value="search">Web Search</option>
+            <option value="word-of-mouth">Word of mouth</option>
+            <option value="other">Other</option>
+          </select>
+        </section>
 
-      <div class="form-control-inline">
-        <input type="radio" name="verify" id="verify-phone" value="phone" />
-        <label for="verify-phone">Via a phone call</label>
-      </div>
+        <section>
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-phone"
+                value="phone"
+                required
+              />
+              <label for="reply-phone">Call me</label>
+            </li>
 
-      <div class="form-control-inline">
-        <input type="radio" name="verify" id="verify-email" value="email" />
-        <label for="verify-email">Via an email</label>
-      </div>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-email"
+                value="email"
+                required
+              />
+              <label for="reply-email">Send me an email</label>
+            </li>
 
-      <div class="form-control-inline">
-        <input type="checkbox" id="agree-terms" name="terms" />
-        <label for="agree-terms">Agree to terms!</label>
-      </div>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-none"
+                value="none"
+                required
+              />
+              <label for="reply-none">Don't reply</label>
+            </li>
+          </ul>
+        </section>
 
-      <div class="form-control-inline">
-        <input type="checkbox" id="contact-email" name="contact" value="email" />
-        <label for="contact-email">Contact me via email</label>
-      </div>
+        <section>
+          <div class="form-control-inline">
+            <input
+              type="checkbox"
+              id="accept-terms"
+              name="accept-terms"
+              required
+            />
+            <label for="accept-terms">Agree to terms!</label>
+          </div>
+        </section>
 
-      <div class="form-control-inline">
-        <input type="checkbox" id="contact-phone" name="contact" value="phone" />
-        <label for="contact-phone">Contact me via phone</label>
-      </div>
-
-      <button>Submit</button>
-    </form>
+        <section class="button">
+          <button type="reset" class="btn-empty">Clear</button>
+          <button type="submit" class="btn-filled">Submit</button>
+        </section>
+      </form>
+    </main>
   </body>
 </html>
